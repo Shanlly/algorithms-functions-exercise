@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+	function maxSubArray(arr){
+        var indexPoints = [];
+        var sumSoFar=0;
+        var endArr =[];
+    for(var i=0;i<=arr.length;i++){
+        for(var p=0; p<= arr.length; p++){
+            if(sumSoFar < sumArr(arr.slice(i,p))){
+                sumSoFar = sumArr(arr.slice(i,p));
+                indexPoints[0]=i;
+                indexPoints[1]=p;
+            }
+        }
+    }
+    endArr= arr.slice(indexPoints[0],indexPoints[1]); 
+    return endArr;
+}  
+maxSubArray([1, 5, -4, 3, 2, -3]);
+
+function sumArr(arr){
+    var subArrSum= 0;
+    for(var i = 0; i<arr.length; i++){
+        subArrSum+=arr[i];
+    }
+    return subArrSum;
+}
+
+
+
+	</script>
+</body>
+</html>
+
+
+ 

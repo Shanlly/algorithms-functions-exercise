@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function encoder(str){
+  var arr=[];
+  var finalCode= '';
+  var code= str.split(" ").join('');
+  var sq = Math.ceil(Math.sqrt(code.length));
+  for (var r=0; r<=code.length; r+=sq){
+    arr.push(code.substring(r, r+sq));
+  }
+   for(var j= 0; j<arr.length; j++){
+     for(var y = 0; y < sq; y++){
+       if(arr[y][j] !== undefined){
+         finalCode+=arr[y][j];
+       }else{
+        finalCode += " ";
+       }
+     }
+     
+   }
+  return finalCode;
+} 
+
+encoder("hae! and via ecy");
+
+function decoder(str){
+  var arr = [];
+	var message='';
+	var code=str.split(" ");
+	for(var r =0;r< code.length; r++){
+	  for(var c = 0; c< code.length;c ++){
+	    if(code[c][r]!== undefined){
+	      message+= code[c][r];
+	    }
+	  }
+	}
+	return message;
+}
+
+decoder("hae! and via ecy");
+decoder("yeieu oanep umgp aa!i rzkt");
+
+
+
+</script>
+	
+</body>
+</html>

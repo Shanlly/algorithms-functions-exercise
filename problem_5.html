@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+//"The quick brown fox" -> "Hetay uickqay rownbay oxfay".
+
+function pigLatin(str){
+  var newArr= [];
+  var arr = str.toLowerCase().split(' ');//change into an array
+   // iterating over the array
+  for(var i=0; i< arr.length; i++){
+    var newWord = arr[i].substring(1) + arr[i][0]+"ay";
+      newArr.push(newWord);
+   }
+      newArr=newArr.join(' ');//make a string and lower case all char.
+      return newArr[0][0].toUpperCase() + newArr.slice(1);
+}
+
+pigLatin("The quick brown fox");
+
+function unPigLatin(str){
+  var newArr =[];
+  var arr = str.split(' ');
+  for(var i=0; i< arr.length; i++){
+    var engWord = arr[i].slice(arr[i].length-3,arr[i].length-2) + arr[i].slice(arr[i][0], arr[i].length-3);
+      newArr.push(engWord);
+    }
+   newArr=newArr.join(' ');
+  
+   return newArr[0][0].toUpperCase() + newArr.slice(1);
+}
+
+unPigLatin("hetay uickqay rownbay oxfay");
+
+
+	</script>
+</body>
+</html>

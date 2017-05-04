@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+	function integerArr(arr){
+	  for(var i= 0; i< arr.length+1; i++){
+	    if(i+1 !== arr[i] ){// checking to see if arr[i]+1 equals the indice.
+	      return i+1;
+	    }
+	  }
+	}
+	integerArr([1,2,5]);// -> 3
+// integerArr([1,2,3,4,5]);// -> 6
+// integerArr([3,4,5] );//-> 1
+   
+	</script>
+</body>
+</html>
