@@ -11,20 +11,16 @@ function randArr(){
 	// set start num and array
    var arr = [], num = Math.floor(Math.random()*100);
    arr.push(num);
-   for(var i = 0; i< 50; i++){
-   	// checking for duplicates and pushing 
-    if (arr.length === 2  && arr.indexOf(arr[i]=== -1)){
-        num = Math.floor(Math.random()*100);
-        arr.push(num);
-     }else{
-       num = Math.floor(Math.random()*100);
-       arr.push(num);
-     }
-    if(arr.length ===10){
-      break;
+   //checking for dupilcates and array length 
+   for(var i = 0; i<70; i++){
+        if(arr[i]===num){
+         num = Math.floor(Math.random()*100);
+          arr.push(num);
+       }
+       if(arr.length ===10){
+        return arr;
     }
   }
-   return arr;
 }
 
 randArr();
@@ -32,3 +28,28 @@ randArr();
 	</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

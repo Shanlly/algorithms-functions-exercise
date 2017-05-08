@@ -27,7 +27,6 @@ function mode(arr) {
 			maxnum = j;
 		}
 	}
-	debugger
 	return maxnum;
 }
 
