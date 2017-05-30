@@ -5,19 +5,24 @@
 	<title>Document</title>
 </head>
 <body>
-	
+<!--2. Write a function which, given a year as a number, returns whether that number is a leap year.
+
+2000 -> true
+1900 -> false
+2016 -> true-->
 
 	<script type="text/javascript">
-	function isLeapYear (year){
-    if(year % 4 === 0 && year %100 !==0){
-      return true;
-    }else if (year % 400===0){ 
-      return true;
-    }else 
-    return false;
-}
+//find whether or not the year given is a leap year
+		function isLeapYear (year){
+		    if(year % 4 === 0 && year %100 !==0){
+		      return true;
+		    }else if (year % 400===0){ 
+		      return true;
+		    }else 
+		    return false;
+		}
 
-isLeapYear(2016);
+		isLeapYear(2016);
 
 	</script>
 </body>

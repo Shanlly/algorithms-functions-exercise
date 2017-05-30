@@ -5,16 +5,21 @@
 	<title>Document</title>
 </head>
 <body>
-	
+<!--3. Write a function which takes an array of integers > 0 and returns the first integer which does not appear in that array.
+[1,2,5] -> 3
+[1,2,3,4,5] -> 6
+[3,4,5] -> 1-->
 
 	<script type="text/javascript">
-	function integerArr(arr){
-	  for(var i= 0; i< arr.length+1; i++){
-	    if(i+1 !== arr[i] ){// checking to see if arr[i]+1 equals the indice.
-	      return i+1;
-	    }
-	  }
-	}
+//finds the missing number in the array
+		function integerArr(arr){
+			for(var i= 0; i< arr.length+1; i++){
+				if(i+1 !== arr[i] ){
+// checking to see if arr[i]+1 equals the indice.
+				  return i+1;
+				}
+			}
+		}
 	integerArr([1,2,5]);// -> 3
 // integerArr([1,2,3,4,5]);// -> 6
 // integerArr([3,4,5] );//-> 1

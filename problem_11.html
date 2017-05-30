@@ -6,8 +6,10 @@
 </head>
 <body>
 	<script type="text/javascript">
+ /* Write two functions, called encodeSquare and decodeSquare. encodeSquare should be able to encrypt any arbitrary string, and decodeSquare should be able to unencrypt any arbitrary encoded string. The unencrypted string will have no spaces, and that's ok.*/
 
-		function encoder(str){
+function encoder(str){
+// assigning variables and getting string usable
   var arr=[];
   var finalCode= '';
   var code= str.split(" ").join('');
@@ -15,6 +17,7 @@
   for (var r=0; r<=code.length; r+=sq){
     arr.push(code.substring(r, r+sq));
   }
+//interates over the letters and divides them based on the sqrt of the length of the string
    for(var j= 0; j<arr.length; j++){
      for(var y = 0; y < sq; y++){
        if(arr[y][j] !== undefined){
@@ -26,11 +29,12 @@
      
    }
   return finalCode;
-} 
+}
 
 encoder("hae! and via ecy");
-
+// per instructions. The unencrypted string will have no spaces, and that's ok.
 function decoder(str){
+// assigns variables and makes string usable 
   var arr = [];
 	var message='';
 	var code=str.split(" ");
@@ -41,7 +45,7 @@ function decoder(str){
 	    }
 	  }
 	}
-	return message;
+	 return message;
 }
 
 decoder("hae! and via ecy");

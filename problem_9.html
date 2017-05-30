@@ -5,25 +5,18 @@
 	<title>problem_8</title>
 </head>
 <body>
-	
 
 	<script type="text/javascript">
 
 function mergeSort (arr1,arr2){
-	// new array
-    var newArr = [];
-    //  making one array using concat and using filter to compare and remove duplicates
-    newArr= arr1.concat(arr2);
-  newArr.sort(function(a, b) {return a - b;});
- for(var i=0; i<newArr.length+1;i++){
- 	if((newArr[i]-newArr[i+1])=== 0){
- 		newArr.push(newArr[i]);
- 	}
- }  
+//concat the two arrays 	
+  var newArr= arr1.concat(arr2);
+// resort them from least to greatest
+  newArr.sort(function(a,b){
+    return a-b;
+  });
   return newArr;
 }
-
-
 mergeSort([1,2,5,6,9], [3,4,5,10]);
 
 	</script>

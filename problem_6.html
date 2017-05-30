@@ -5,17 +5,23 @@
 	<title>problem_6</title>
 </head>
 <body>
-	
+<!--6. Write a function which takes in two arrays and determines if they contain the same number of the same values.
+[], [] -> true
+[2, 3, 4], [1, 2, 3] -> false
+["a", "c", "b"], ["a", "b", "c"] -> true
+[1, 1, 1], [1, 1, 1, 1] -> false
+-->
 
 	<script type="text/javascript">
 function compare(arr1, arr2){
 	var pos = 0, neg = 0;
-  // which arr is longer
+// if the arrays are not of equal length
   if(arr1.length !== arr2.length){
     return false;
   }else if (arr1.length === 0 && arr2.length === 0){
   	return true;
    }else {
+//checking for same values
    	for(var i =0; i<arr2.length; i++){
       for(var p= 0; p<arr2.length; p++){
         if(arr1[i] === arr2[i] || p=== arr2.length-1){

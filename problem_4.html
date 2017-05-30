@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>problem_4</title>
-</head>
+  <head>
+  	<meta charset="UTF-8">
+  	<title>problem_4</title>
+  </head>
 <body>
-	
+<!--4. Write a function which takes an array of integers and returns an array with any duplicate integers removed.
+[1,1,2,3,1,2,3] -> [1,2,3]
+[1,4,4,4,2,2,4,4,4] -> [1,4,2]-->
+
 
 	<script type="text/javascript">
-	
-function repeat(arr){
-  var arr1=[];
-  for (var i= 0; i< arr.length; i++){
-        if(arr1.indexOf(arr[i])===-1){
-        arr1.push(arr[i]);
+//removes the duplicates in the array and returns the array without the duplicates
+    function repeat(arr){
+      var arr1=[];
+      for (var i= 0; i< arr.length; i++){
+            if(arr1.indexOf(arr[i])===-1){
+            arr1.push(arr[i]);
+          }
       }
-  }
-  return arr1;
-}
-  
+      return arr1;
+    }
+      
 
 	</script>
 </body>

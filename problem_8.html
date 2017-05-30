@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
+  <head>
+  	<meta charset="UTF-8">
+  	<title>Document</title>
+  </head>
 <body>
+<!--Write a function which takes no input and returns an array of 10 distinct randomly generated integers between 1 and 100.
+-->
 	
 	<script type="text/javascript">
-function randArr(){
-	// set start num and array
-   var arr = [], num = Math.floor(Math.random()*100);
-   arr.push(num);
-   //checking for dupilcates and array length 
-   for(var i = 0; i<70; i++){
-        if(arr[i]===num){
-         num = Math.floor(Math.random()*100);
-          arr.push(num);
-       }
-       if(arr.length ===10){
-        return arr;
+  function randArr(){
+// set start num and array
+     var i =1;
+     var arr = [], num = Math.floor(Math.random() * 100);
+//checking for dupilcates and array length 
+    while(i <=10){
+      num = Math.floor(Math.random() * 100);
+      if(arr.indexOf(num) === -1){
+        arr.push(num);
+      }
+        i++;
     }
+      return arr;
   }
-}
-
-randArr();
+  randArr();
 
 	</script>
 </body>

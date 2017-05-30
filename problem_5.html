@@ -11,13 +11,15 @@ u<!DOCTYPE html>
 
 function pigLatin(str){
   var newArr= [];
-  var arr = str.toLowerCase().split(' ');//change into an array
-   // iterating over the array
+  var arr = str.toLowerCase().split(' ');
+//change into an array
+// iterating over the array
   for(var i=0; i< arr.length; i++){
     var newWord = arr[i].substring(1) + arr[i][0]+"ay";
       newArr.push(newWord);
    }
-      newArr=newArr.join(' ');//make a string and lower case all char.
+      newArr=newArr.join(' ');
+//make a string and lower case all char.
       return newArr[0][0].toUpperCase() + newArr.slice(1);
 }
 
